@@ -1,0 +1,728 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background-color:lightgray;
+}
+
+
+h1 {
+    
+    transition: transform .2s;
+   
+  }
+  
+h1:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.2); 
+  }
+
+/*--------------------------------Navigation--------------------------------------------------------------------*/
+/*-----------------Left-----------------------*/
+
+
+.nav
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* background-color: black; */
+
+}
+
+.container1
+{
+    display: flex;
+    width: 40%;
+    align-items: center;
+}
+
+.logo img
+{
+    width: 100px;
+    height: 100px;
+}
+
+.container1 h1
+{
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: center;
+    color: #ff004f;
+}
+
+/*---------------------Middle------------------------------*/
+
+.container2
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.menu
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+}
+
+.menu li
+{
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+.menu li a
+{
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    position: relative;
+}
+
+.menu li a::after
+{
+    content: '';
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background: #ff004f;
+    transition: 0.5s;
+}
+
+.menu li a:hover:after
+{
+    width: 100%;
+}
+
+/** ------------ right ---------------------------*/
+.container3
+{
+    display: flex;
+    width: 30%;
+}
+
+.menu1
+{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+}
+
+.menu1 li
+{
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+.menu1 li a
+{
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    background-color: purple;
+    border-radius: 10px;
+    
+}
+
+.menu1 li:hover
+{
+    transform: translateY(-10px);
+}
+
+/**-------------------------------------------------- banner ------------------------------------------*/
+
+.banner img
+{
+    width: 100%;
+    position: relative;
+    filter: brightness(50%);
+}
+
+.text-on-image
+{
+    position: absolute;
+    bottom: 50%;
+    left: 10%;
+    top: 50%;
+}
+
+.text-on-image h1
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.text-on-image h4
+{
+    color: rgba(0, 0, 0, 0.451);
+    padding-left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text-on-image .span1
+{
+    color: #ff004f;
+}
+
+.text-on-image h3
+{
+    padding: 10px;
+    margin: 50px;
+    margin-left: 200px;
+    width: 100px;
+    border: 2px solid #ff004f;
+    transition: 0.5s;
+}
+
+.text-on-image h3:hover
+{
+    background-color: #ff004f;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: translateY(-10px);
+    
+}
+
+/*------------------------------ we offer --------------------------------------------*/
+.offer
+{
+    background-color: rgba(0, 0, 0, 0.419);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.offer-title
+{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.offer-Containers
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+}
+
+.cont
+{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    border:2px solid #ff004f;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.cont:hover
+{
+    background-color: #ff004f;
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.cont img 
+{
+    width: 80px;
+    height: 80px;
+}
+
+.cont h2
+{
+    margin: 5px;
+    color: aqua;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cont p
+{
+    padding: 10px;
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*-------------------------------------------- courses ---------------------------------------------*/
+.courses
+{
+    background-color: rgba(0, 0, 0, 0.419);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+
+}
+.course-title
+{
+    text-align: center;
+    margin: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+.semester-selection
+{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.semester-selection h3
+{
+    margin: 30px;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    position: relative;
+}
+
+.tab-links::after
+{
+    content: '';
+    left: 0;
+    width: 0;
+    bottom: -4px;
+    position: absolute;
+    background: #ff004f;
+    height: 3px;
+    cursor: pointer;
+    transition: 0.5s ;
+
+}
+
+.tab-links.active-link::after
+{
+    width: 100%;
+}
+
+.tab-contents
+{
+    display: none;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+
+}
+
+.grid-item
+{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.tab-contents.active-tab
+{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    padding: 50px;
+
+}
+
+.text
+{
+    padding: 10px;
+    margin-left: 100px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid #ff004f;
+    width: 100px;
+}
+
+.tab-contents img
+{
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+
+.tab-contents.active-tab img
+{
+
+    width: 300px;
+    height: 300px;
+    border: 3px solid #ff004f;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    transition: 0.5s;
+}
+
+.tab-contents img:hover
+{
+    transform: translateY(-15px);
+}
+
+.tab-contents.active-tab img.show
+{
+    opacity: 1;
+}
+
+/** ------------------------------------- About us ----------------------------------------------------------**/
+
+.about-container
+{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.419);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.about-con1
+{
+    width: 50%;
+    margin: 20px;
+}
+
+.about-con1 img
+{
+    width: 500px;
+    height: 700px;
+    border-radius: 20px;
+}
+
+.about-con2
+{
+    width: 50%;
+    text-align: center;
+    margin: 20px;
+}
+
+.about-con2 h1
+{
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.about-con2 p
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+}
+
+.about-con2 h2
+{
+    text-align: left;
+    color: rgba(0, 0, 0, 0.429);
+    padding: 10px;
+    margin: 10px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.about-con2 ul
+{
+    text-align: justify;
+    margin: 10px;
+}
+
+.about-con2 li
+{
+    margin: 10px;
+    font-family:sans-serif;
+}
+
+/* -------------------------------------- team -----------------------------------------------------------*/
+.team
+{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.419);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.team-title
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.team-image img
+{
+    width: 200px;
+    height: 220px;
+    border: 3px solid #ff004f;
+    border-radius: 50%;
+}
+
+.team-image
+{
+    display:inline-block;
+    margin: 60px;
+    transition: transform 0.5s;
+}
+
+.team-image:hover
+{
+    transform: translateY(-20px);
+}
+
+.team-image h2
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.team-image p
+{
+    color: rgba(0, 0, 0, 0.382);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* --------------------------------------------  Contact --------------------------------------------------------*/
+.contact
+{
+    background-color: rgba(0, 0, 0, 0.419);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.contact-left
+{
+    margin-left: 100px;
+    width: 40%;
+}
+
+.contact-left h1
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.contact-right
+{
+    width: 60%;
+}
+.contact-left p
+{
+    margin-top: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contact-left p i
+{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icon
+{
+    margin-top: 30px;
+}
+
+.social-icon a
+{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icon a:hover
+{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn2
+{
+    align-items: center;
+    display: inline-block;
+    background-color: #ff004f;
+    width: 130px;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+}
+
+
+form input
+{
+    width: 80%;
+    border: 2px solid black;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form input:focus
+{
+    border: 2px solid #ff004f;
+}
+.msg
+{
+    width: 80%;
+    border: 2px solid black;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.msg:focus
+{
+    border: 2px solid #ff004f;
+}
+
+/** --------------------------------------------- for mobile view ---------------------------------------------**/
+@media (width<1351px)
+{
+    .container1
+    {
+        width: 100%;
+    }
+    .container2
+    {
+        display:none;
+        width: 100%;
+    }
+    .text-on-image
+    {
+        position: relative;
+    }
+    .offer-Containers
+    {
+        display: block;
+    }
+    .tab-contents.active-tab
+    {
+        display: block;
+    }
+    .semester-selection h3
+    {
+        margin: auto;
+        width: 100%;
+    }
+    .about-container
+    {
+        display: block;
+    }
+
+    .about-con1
+    {
+        display: none;
+    }
+    .about-con2
+    {
+        width: 90%;
+    }
+    .contact-left
+    {
+        width: 100%;
+        margin-left: 50px;
+        
+    }
+
+    .contact-right
+    {
+        width: 100%;
+    }
+    .contact
+    {
+        display: block;
+    }
+
+    .text-on-image h3
+    {
+        margin-left: 100px;
+    }
+
+}
+
+/**------------------------------------ course footer------------------------------------------------------**/
+footer
+{
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    background-color: black;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footcon1
+{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+}
+
+.footcon1 h2
+{
+    margin: 10px;
+}
+.footcon2
+{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+}
+
+.footcon2 h3
+{
+    text-align: center;
+    align-items: center;
+    background-color: #ff004f;
+    width: 150px;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------*/
+.desc-content
+{
+    display: block;
+    text-align: justify;
+}
+
+.desc-content p
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(0, 0, 0, 0.456);
+}
+
+.desc-content h3
+{
+    padding-bottom: 8px;
+    font-family:Arial, Helvetica, sans-serif;
+}

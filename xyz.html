@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/7853a37f39.js"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+     <!-- ****************************  Navigation ******************************************************-->
+     <div class="nav">
+        <div class="container1">
+            <div class="logo">
+                <img src="imag/logo.png" id="blink">
+            </div>
+            <h1>Skillchaze</h1>
+        </div>
+        <script src="blink.js"></script>
+        <div class="container2">
+            <ul class="menu">
+                <li><a href="main.html"><i class="fa-solid fa-house"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="courses" id="course">
+        <div class="course-title">
+            <h1>Management</h1>
+        </div>
+        <div class="semester-selection">
+            <h3 class="tab-links active-link" onclick="opentab('descr')">Description</h3>
+            <h3 class="tab-links" onclick="opentab('over')">Overview</h3>
+        </div>
+        <div class="course-list">
+            <div class="tab-contents active-tab" id="descr">
+            </div>
+            <div class="tab-contents" id="over">
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName('tab-contents');
+        function opentab(tabname)
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+    
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+    
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <footer>
+        <div class="footcon1">
+            <h2>₹89</h2>
+            <h4><del>₹99</del></h4>
+        </div>
+        <div class="footcon2">
+            <a href="" style="text-decoration: none; color: black;"><h3>Buy Now</h3></a>
+
+        </div>
+    </footer>
+</body>
+</html>
