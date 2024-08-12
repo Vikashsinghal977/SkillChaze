@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <!-- ****************************  Navigation ******************************************************-->
+    <!-- ****************************  Navigation *******************************************-->
     <div class="nav">
         <div class="container1">
             <div class="logo">
@@ -206,11 +206,7 @@
         <div class="team-title">
             <h1>Meet the team</h1>
         </div>
-        <div class="team-image">
-            <img src="imag/kunal singhal.jpg">
-            <h2>Kunal Singhal</h2>
-            <p>Director</p>
-        </div>
+        
         <div class="team-image">
             <img src="imag/kushagra bhai.jpg">
             <h2>Kushagra Garg</h2>
@@ -221,11 +217,7 @@
             <h2>Vikash Singhal</h2>
             <p>Co-Director</p>
         </div>
-        <div class="team-image">
-            <img src="imag/kumkum.jpg">
-            <h2>Kumkum Dahreja</h2>
-            <p>Marketing Head</p>
-        </div>
+       
     </div>
 
     <!-- **************************************** Contact **************************************************************-->
@@ -256,13 +248,13 @@
     </div>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed("#typingText",{
             string: ["SkillChaze", "Web Developemt", "c++", "Lerning..."],
             typeSpeed:150
         })
-    </script>
+    </script> -->
 
     <!-- ***************************************   Java Script **********************************************************-->
     <script>
@@ -285,14 +277,44 @@
         }
     </script>
     <script>
-        var images = document.getElementsByTagName("img");
-            for(var j=0;j<images.length;j++)
-            {
-                setTimeout(function(image)
-                {
-                    image.classList.add("show");
-                },j*80,images[j]);
-            }
+        (function() {
+    const texts = ["Skillchaze", "JavaScript", "Java", "Node.js"];
+    let textIndex = 0;
+    let charIndex = 0;
+
+    const typingElement = document.getElementById('typingText');
+
+    function typeText() {
+        if (charIndex < texts[textIndex].length) {
+            typingElement.textContent += texts[textIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(typeText, 100);
+        } else {
+            setTimeout(eraseText, 1000);  // Pause before erasing
+        }
+    }
+
+    function eraseText() {
+        if (charIndex > 0) {
+            typingElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(eraseText, 50);
+        } else {
+            textIndex = (textIndex + 1) % texts.length;
+            setTimeout(typeText, 500);  // Pause before typing the next word
+        }
+    }
+
+    function blinkCaret() {
+        typingElement.style.borderRightColor = typingElement.style.borderRightColor === 'black' ? 'transparent' : 'black';
+        setTimeout(blinkCaret, 500);
+    }
+
+    typeText();
+    blinkCaret();
+})();
+
+
     </script>
 </body>
 </html>
